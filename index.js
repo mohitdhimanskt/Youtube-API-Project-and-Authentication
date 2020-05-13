@@ -17,3 +17,7 @@ e.preventDefault();
 const channel = channelInput.value;
 getChannel(channel);
 });
+
+function handleClientLoad(){
+    gapi.load('client: auth2',initClient);
+}
