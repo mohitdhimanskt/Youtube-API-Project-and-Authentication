@@ -53,3 +53,6 @@ function updatedSigninStatus(isSignedIn){
 function handleAuthClick(){
     gapi.auth2.getAuthInstance().signIn();
 }
+function handleSignoutClick(){
+    gapi.auth2.getAuthInstance().signOut();
+}
