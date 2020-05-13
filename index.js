@@ -99,3 +99,11 @@ function getChannel(channel){
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
+    function requestVideoPlaylist(playlistId){
+        const requestOptions = {
+            playlistId: playlistId,
+            part: 'snippet',
+            maxResults: 10
+        };
+        
+    }
