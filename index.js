@@ -56,3 +56,7 @@ function handleAuthClick(){
 function handleSignoutClick(){
     gapi.auth2.getAuthInstance().signOut();
 }
+function showChannelData(data){
+    const channelData = document.getElementById('channel-data');
+    channelData.innerHTML = data;
+}
