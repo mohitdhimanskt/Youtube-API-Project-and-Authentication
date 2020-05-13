@@ -49,3 +49,7 @@ function updatedSigninStatus(isSignedIn){
         videoContainer.style.display = 'none';
     }
 }
+
+function handleAuthClick(){
+    gapi.auth2.getAuthInstance().signIn();
+}
