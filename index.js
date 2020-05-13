@@ -21,3 +21,17 @@ getChannel(channel);
 function handleClientLoad(){
     gapi.load('client: auth2',initClient);
 }
+function initClient(){
+    gapi.client
+    .init({
+        discoveryDocs: DISCOVERY_DOCS,
+        clientID: CLIENT_ID,
+        scope: SCOPES
+    })
+    .then(()=>{
+        gapi.auth2.getAuthInstance().isSignedIn.listen(updatedSigninStatus);
+        updatedSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+        authorizeButton.onclick = handleAuthClick;
+        signoutButton.onclick = handleSignoutClick;
+    })
+}
