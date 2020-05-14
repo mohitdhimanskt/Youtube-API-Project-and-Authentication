@@ -31,7 +31,7 @@ function handleClientLoad() {
 function initClient() {
   gapi.client
     .init({
-      discoveryDocs: DISCOVERY_DOCS,
+      discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
       clientId: CLIENT_ID,
       scope: SCOPES
     })
