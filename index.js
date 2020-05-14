@@ -1,6 +1,6 @@
 const CLIENT_ID = 'YOUR_CLIENT_ID';
 const DISCOVERY_DOCS = [
-  'https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'
+  'https://sheets.googleapis.com/$discovery/rest?version=v4'
 ];
 const SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
 
@@ -31,7 +31,7 @@ function handleClientLoad() {
 function initClient() {
   gapi.client
     .init({
-      discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+      discoveryDocs: DISCOVERY_DOCS,
       clientId: CLIENT_ID,
       scope: SCOPES
     })
