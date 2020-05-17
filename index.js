@@ -29,6 +29,7 @@ function handleClientLoad() {
 
 
 function initClient() {
+  
   gapi.client
     .init({
       discoveryDocs: DISCOVERY_DOCS,
@@ -42,7 +43,10 @@ function initClient() {
       updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
       authorizeButton.onclick = handleAuthClick;
       signoutButton.onclick = handleSignoutClick;
-    });
+    }).catch((err) => {
+      console.log(err);
+    })
+  
 }
 
 
