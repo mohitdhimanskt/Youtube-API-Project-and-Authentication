@@ -1,6 +1,6 @@
 const CLIENT_ID = 'YOUR_CLIENT_ID';
 const DISCOVERY_DOCS = [
-  'https://sheets.googleapis.com/$discovery/rest?version=v4'
+  'https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'
 ];
 const SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
 
