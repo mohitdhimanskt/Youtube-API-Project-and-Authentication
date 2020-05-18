@@ -20,7 +20,7 @@ channelForm.addEventListener('submit', e => {
   const channel = channelInput.value;
 
   getChannel(channel);
-});
+});                                                                                                                                                                                                                                                                                                                                         
 
 
 function handleClientLoad() {
@@ -48,6 +48,15 @@ function initClient() {
     })
   
 }
+gapi.analytics.ready(function(){
+  gapi.analytics.auth.authorize({
+    container: 'embed-api-auth-container',
+    clientid: '69099807201-jts31e036fd7osma9m72al9jquu85uda.apps.googleusercontent.com'
+  });
+  var  viewSelector = new gapi.analytics.viewSelector({
+    container: 'view-selector-container'
+  });
+})
 
 
 function updateSigninStatus(isSignedIn) {
